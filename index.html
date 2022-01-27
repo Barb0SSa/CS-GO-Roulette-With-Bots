@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS:GO Рулетка</title>
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/png">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+	<div class="header__inner">
+		<div class="header__left-menu menu">
+			<div class="menu__open">
+				<i class="fa fa-bars menu__opener" aria-hidden="true"></i>
+			</div>
+			<div class="menu__inner">
+				<div class="menu__item menu__bots">
+					<div class="menu__link">Боты</div>
+				</div>
+				<div class="menu__item menu__rules">
+					<div class="menu__link">Правила</div>
+				</div>
+				<div class="menu__item menu__papich">
+					<div class="menu__link">Папич(тест)</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__logo-container">
+			<div class="header__logo">
+				<img src="images/csgologo3.png" alt="" class="header__img">
+			</div>
+		</div>
+		<nav class="header__right-menu menu">
+			<div class="menu__open">
+				<i class="fa fa-bars menu__opener" aria-hidden="true"></i>
+			</div>
+			<div class="menu__inner">
+				<div class="menu__item menu__roulette menu__item_active">
+					<div class="menu__link">Рулетка</div>
+				</div>
+				<div class="menu__item menu__cases">
+					<div class="menu__link">Кейсы</div>
+				</div>
+				<!-- <div class="menu__item">
+					<div class="menu__link">Магазин</div>
+				</div> -->
+			</div>
+		</nav>
+	</div>
+</header>
+<div class="sticky">
+	<section class="sticky__bots bots">
+		<div class="bots__substrate">
+			<div class="bots__inner">
+				<ul class="bots__stat">
+					<li class="bots__item">
+						<div class="bots__name">Иваныч</div>
+						<div class="bots__items">16 вещей</div>
+						<div class="bots__bank">123р</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="sticky__rules rules">
+		<div class="rules__substrate">
+			<div class="rules__inner">
+				<h1 class="rules__h1">Правила игры</h1>
+				<ol class="rules__list" type="1">
+					<li class="rules__item">Раунд начинается, когда появляется хотя бы 2 игрока</li>
+					<li class="rules__item">Вносите вещи, чтобы повысить ваш шанс на победу</li>
+					<li class="rules__item">Вещи можно получить, победив в рулетке, либо открывая кейсы!</li>
+					<li class="rules__item">Максимально в одном раунде можно внести 10 вещей!</li>
+					<li class="rules__item">Максимальное количество игроков в раунде - 10</li>
+					<li class="rules__item">Раунд длится 2 минуты, либо пока не наберется 100 вещей</li>
+					<li class="rules__item">Победитель выявляется случайным образом и забирает все вещи, внесенные в раунд</li>
+					<li class="rules__item">С маленьким шансом в игру может вступить ИМБА-БОТ, будьте осторожны!</li>
+				</ol>
+				<div class="rules__btns">
+					<div class="rules__understand">Я понял</div>
+					<!-- <div class="rules__more">Подробнее</div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<main class="main">
+	<article class="main__inner cases">
+		<section class="cases__inner">
+			<!-- меню кейсов -->
+			<section class="cases__menu case-menu">
+				<!-- <div class="case-menu__item" data-case="0">
+					<img src="images/cases/case1.png" alt="case 0" class="case-menu__img">
+					<p class="case-menu__name">Кейс Dragon Lore</p>
+				</div>
+				<div class="case-menu__item" data-case="1">
+					<img src="images/cases/case2.png" alt="case 1" class="case-menu__img">
+					<p class="case-menu__name">Кейс Вой</p>
+				</div> -->
+			</section>
+			<!-- текущий кейс -->
+			<section class="cases__present">
+				<div class="cases__balance">
+					<span>Баланс: </span>
+					<span class="cases__balance-val">10</span>
+					<i class="fa fa-money" aria-hidden="true"></i>
+				</div>
+				<div class="cases__columns">
+					<div class="cases__column">
+						<div class="cases__lastwin lastwin">
+							<h3 class="lastwin__h3">Последний выигрыш</h3>
+							<div class="lastwin__inner">
+								<div class="lastwin__weapon-wrapper">
+									<div class="weapon lastwin__weapon">
+										<img src="images/weapons/AKB1.png" alt="" class="weapon__img">
+										<p class="weapon__count">33.3
+											<i class="fa fa-money" aria-hidden="true"></i>
+										</p>
+									<div class="weapon__qual weapon__qual_b"></div>
+								</div>
+								</div>
+								<div class="lastwin__info">
+									<div class="lastwin__name">АК-47 | Скин нейм</div>
+									<div class="lastwin__chance">Шанс: <span class="lastwin__chance-val">3%</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cases__column">
+						<div class="cases__present-case">
+							<img src="images/cases/case1.png" alt="case 1" class="cases__present-img">	
+							<p class="cases__present-name">Кейс Dragon Lore</p>
+						</div>
+					</div>
+					<div class="cases__column cases__column_reverse">
+						<div class="cases__start">Открыть</div>
+						<div class="cases__change">Другой кейс</div>
+					</div>
+				</div>
+			</section>
+			<!-- рулетка кейсов -->
+			<section class="cases__roulette-container">
+				<div class="cases__roulette gamebar">
+					<div class="gamebar__inner">
+						<div class="gamebar__roller">
+
+						</div>
+					</div>
+					<div class="gamebar__marker">
+						<i class="fa fa-caret-up" aria-hidden="true"></i>
+					</div>
+				</div>
+			</section>
+			<!-- дроп с кейса -->
+			<section class="cases__content">
+				<section class="cases__drop">
+					<div class="weapon" data-tooltip="AKB1">
+						<img src="images/weapons/AKB1.png" alt="" class="weapon__img">
+						<p class="weapon__count">33.3
+							<i class="fa fa-money" aria-hidden="true"></i>
+						</p>
+						<div class="weapon__qual weapon__qual_b"></div>
+						<div class="weapon__chance">3%</div>
+					</div>
+				</section>
+				<aside class="cases__sidebar sidebar">
+					<div class="sidebar__inner">
+					<div class="sidebar__smooth" style="top:0px;">
+						<div class="sidebar__info">
+							<div class="sidebar__player">
+								<div class="sidebar__info-container">
+									<div class="sidebar__name">Кожаный</div>
+									<div class="sidebar__quant">44%</div>
+								</div>
+								<div class="sidebar__info-container">
+									<div class="sidebar__money"><span class="sidebar__money-val">550</span><i class="fa fa-money" aria-hidden="true"></i></div>
+									<div class="sidebar__value"><span class="sidebar__val">6</span>вещей</div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__timer">
+							<span class="sidebar__min">02</span>
+							:
+							<span class="sidebar__sec">00</span>
+						</div>
+						<div class="sidebar__deposit">
+							<p class="sidebar__items-label">Ваши вещи:</p>
+							<div class="sidebar__items">
+								<!-- <div class="sidebar__item">
+									<img src="images/weapon1.png" alt="" class="sidebar__item-img">
+									<p class="sidebar__count">33.3 <i class="fa fa-money" aria-hidden="true"></i></p>
+									<p class="sidebar__col">x3</p>
+								</div> -->	
+							</div>
+						</div>
+						<div class="sidebar__leave-button">Пополнить</div>
+					</div>
+				</div>
+				</aside>
+			</section>
+		</section>
+	</article>
+	<!-- roulette start -->
+	<article class="main__inner roulette">	
+		<section class="main__info info">
+			<div class="info__inner">
+				<div class="info__bank-wrapper">
+					<p class="info__bank">Bank: <span class="info__bank-value">365</span> <i class="fa fa-money" aria-hidden="true"></i></p>
+				</div>
+				<div class="info__starting">
+					<div class="info__progress">
+						<span></span>
+						<p>33/100</p>
+					</div>
+					<div class="info__or">или через</div>
+					<div class="info__timer"><span class="info__min">02</span>:<span class="info__sec">00</span></div>
+				</div>
+				<div class="info__other">
+					<div class="info__prompt">
+						<div class="info__pointer"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+						<div class="info__prompt-text">Чем <span class="info__prompt_bold">дороже</span> предметы вы ставите, тем <span class="info__prompt_bold">выше</span> шанс на <span class="info__prompt_bold">победу</span></div>
+					</div>
+					<div class="info__prompt">
+						<div class="info__pointer"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+						<div class="info__prompt-text">Победитель определиться когда наберется <span class="info__prompt_bold">100 предметов</span> или пройдет <span class="info__prompt_bold">2 минуты</span></div>
+					</div>
+					<div class="info__prompt">
+						<div class="info__join">Внести</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<section class="main__bar bar">
+			<div class="bar__inner">
+				<!-- <div class="bar__item">
+					<img src="images/profile1.jpg" alt="profile" class="bar__img">
+					<div class="bar__chance-wrapper">
+						<p class="bar__chance">44.2%</p>
+					</div>
+				</div> -->
+			</div>
+		</section>
+		<section class="main__bar gamebar gamebar__roulette">
+			<div class="gamebar__inner">
+				<div class="gamebar__roller">
+				</div>
+			</div>
+			<div class="gamebar__marker">
+				<i class="fa fa-caret-up" aria-hidden="true"></i>
+			</div>
+		</section>
+		<section class="main__lastround lastround" style="display: none;">
+			<div class="lastround__inner">
+				<h3 class="lastround__h">Последний победитель</h3>
+				<div class="lastround__info">
+					<div class="lastround__winner">
+						<img src="images/unknown.jpg" alt="unknown" class="lastround__img">
+						<p class="lastround__name">Unknown</p>
+						<p class="lastround__chance">Шанс: <span class="lastround__chance-value">100%</span></p>
+						<p class="lastround__bank">Выигрыш: <span class="lastround__bank-value">0</span><i class="fa fa-money" aria-hidden="true"></i></p>
+						<p class="lastround__colitems">Вещей: <span class="lastround__colitems-value">0</span></p>
+					</div>
+					<div class="lastround__toggle">
+						<div class="lastround__open-close">
+							<i class="fa fa-caret-down" aria-hidden="true"></i>
+						</div>
+						<!-- <div class="lastround__close">
+							<i class="fa fa-caret-down" aria-hidden="true"></i>
+						</div> -->
+					</div>
+				</div>
+				<div class="lastround__items">
+					<!-- <div class="lastround__item">
+						<img src="images/weapon1.png" alt="" class="lastround__item-img">
+						<p class="lastround__count">33.3 <i class="fa fa-money" aria-hidden="true"></i></p>
+						<p class="lastround__val">x3</p>
+					</div> -->
+				</div>
+			</div>
+		</section>
+		<section class="main__log log">
+			<aside class="main__sidebar sidebar">
+				<div class="sidebar__inner">
+					<div class="sidebar__smooth" style="top:0px;">
+						<div class="sidebar__info">
+							<div class="sidebar__player">
+								<div class="sidebar__info-container">
+									<div class="sidebar__name">Кожаный</div>
+									<div class="sidebar__quant">44%</div>
+								</div>
+								<div class="sidebar__info-container">
+									<div class="sidebar__money"><span class="sidebar__money-val">550</span><i class="fa fa-money" aria-hidden="true"></i></div>
+									<div class="sidebar__value"><span class="sidebar__val">6</span>вещей</div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__timer">
+							<span class="sidebar__min">02</span>
+							:
+							<span class="sidebar__sec">00</span>
+						</div>
+						<div class="sidebar__deposit">
+							<p class="sidebar__items-label">Ваши вещи:</p>
+							<div class="sidebar__items">
+								<!-- <div class="sidebar__item">
+									<img src="images/weapon1.png" alt="" class="sidebar__item-img">
+									<p class="sidebar__count">33.3 <i class="fa fa-money" aria-hidden="true"></i></p>
+									<p class="sidebar__col">x3</p>
+								</div> -->	
+							</div>
+						</div>
+						<div class="sidebar__put-button" data-maxitems="10">Внести</div>
+					</div>
+				</div>
+			</aside>
+			<!-- <div class="log__inner">
+				<div class="log__deposit">
+					<div class="log__player">
+						<img src="images/profile1.jpg" alt="profile" class="log__logo">
+						<p class="log__nickname">Игрок</p>
+						<div class="log__value"><span class="log__val">360</span><i class="fa fa-money" aria-hidden="true"></i></div>	
+					</div>
+					<div class="log__items">
+						<div class="log__item">
+							<img src="images/weapon1.png" alt="weapon" class="log__weapon">
+							<p class="log__count">33.3<i class="fa fa-money" aria-hidden="true"></i></p>
+						</div>
+					</div>
+				</div> -->
+			<div class="log__inner"></div>
+			<!--  -->
+		</section>
+	</article>
+</main>
+<div class="main__input input">
+	<div class="input__inner">
+		<div class="input__window">
+			<div class="input__header">
+				<p>Выберите вещи, которые хотите внести:<i class="fa fa-cog input__settings-opener" aria-hidden="true"></i></p>
+				<div class="input__player-inv">
+					Баланс:
+					<div class="input__stats input__stats_money"><span class="input__player-capital"></span><i class="fa fa-money" aria-hidden="true"></i></div>
+					/
+					<div class="input__stats input__stats_items"><span class="input__player-items"></span></div>
+				</div>
+			</div>
+			<div class="input__settings settings" style='height: 0px;'>
+				<div class="settings__inner">
+					<div class="settings__sort">Сорт. по цене: <i class="fa fa-long-arrow-up settings__sort-switch settings__sort-switch_down" data-sort="down" aria-hidden="true"></i></div>
+					<div class="settings__quant">
+						<div class="settings__elem settings__bad-wrapper">
+							<label class="settings__label" for='check1'>Bad</label>
+							<input type="checkbox" checked="checked" class="settings__bad" id='check1'>
+						</div>
+						<div class="settings__elem settings__worn-wrapper">
+							<label class="settings__label" for='check2'>Worn</label>
+							<input type="checkbox" checked="checked" class="settings__worn" id='check2'>
+						</div>
+						<div class="settings__elem settings__normal-wrapper">
+							<label class="settings__label" for='check3'>Normal</label>
+							<input type="checkbox" checked="checked" class="settings__normal" id='check3'>
+						</div>
+						<div class="settings__elem settings__medium-wrapper">
+							<label class="settings__label" for='check4'>Medium</label>
+							<input type="checkbox" checked="checked" class="settings__medium" id='check4'>
+						</div>
+						<div class="settings__elem settings__high-wrapper">
+							<label class="settings__label" for='check5'>High</label>
+							<input type="checkbox" checked="checked" class="settings__high" id='check5'>
+						</div>
+						<div class="settings__elem settings__secret-wrapper">
+							<label class="settings__label" for='check6'>Secret</label>
+							<input type="checkbox" checked="checked" class="settings__secret" id='check6'>
+						</div>
+						<div class="settings__elem settings__immortal-wrapper">
+							<label class="settings__label" for='check7'>Immortal</label>
+							<input type="checkbox" checked="checked" class="settings__immortal" id='check7'>
+						</div>
+					</div>
+					<div class="settings__save-wrapper">
+						<div class="settings__save">Установить</div>
+					</div>
+				</div>
+			</div>
+			<div class="input__items">
+				<div class="input__choise">
+					<!-- <div class="input__item">
+						<img src="images/weapon1.png" alt="" class="input__img">
+						<p class="input__count">33.3 <i class="fa fa-money" aria-hidden="true"></i></p>
+						<p class="input__val">x3</p>
+					</div> -->
+				</div>
+			</div>
+			<div class="input__enter">
+				<div class="input__show-put"></div>
+				<div class="input__valDeposit"><span class="input__valDeposit-span">0</span> <i class="fa fa-money" aria-hidden="true"></i></div>
+				<div class="input__btn">Внести  <span class="input__colDeposit"></span></div>
+			</div>
+			<div class="input__close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		</div>
+	</div>
+</div>
+<div class="main__input-sale input input-sale">
+	<div class="input__inner">
+		<div class="input__window">
+			<div class="input__header">
+				<p>Выберите вещи, которые хотите продать:<!-- <i class="fa fa-cog input__settings-opener" aria-hidden="true"></i> --></p>
+				<div class="input__player-inv">
+					Баланс:
+					<div class="input__stats input__stats_money"><span class="input__player-capital"></span><i class="fa fa-money" aria-hidden="true"></i></div>
+					/
+					<div class="input__stats input__stats_items"><span class="input__player-items"></span></div>
+				</div>
+			</div>
+			<!-- <div class="input__settings settings" style='height: 0px;'>
+				<div class="settings__inner">
+					<div class="settings__sort">Сорт. по цене: <i class="fa fa-long-arrow-up settings__sort-switch settings__sort-switch_down" data-sort="down" aria-hidden="true"></i></div>
+					<div class="settings__quant">
+						<div class="settings__elem settings__bad-wrapper">
+							<label class="settings__label" for='check1'>Bad</label>
+							<input type="checkbox" checked="checked" class="settings__bad" id='check1'>
+						</div>
+						<div class="settings__elem settings__worn-wrapper">
+							<label class="settings__label" for='check2'>Worn</label>
+							<input type="checkbox" checked="checked" class="settings__worn" id='check2'>
+						</div>
+						<div class="settings__elem settings__normal-wrapper">
+							<label class="settings__label" for='check3'>Normal</label>
+							<input type="checkbox" checked="checked" class="settings__normal" id='check3'>
+						</div>
+						<div class="settings__elem settings__medium-wrapper">
+							<label class="settings__label" for='check4'>Medium</label>
+							<input type="checkbox" checked="checked" class="settings__medium" id='check4'>
+						</div>
+						<div class="settings__elem settings__high-wrapper">
+							<label class="settings__label" for='check5'>High</label>
+							<input type="checkbox" checked="checked" class="settings__high" id='check5'>
+						</div>
+						<div class="settings__elem settings__secret-wrapper">
+							<label class="settings__label" for='check6'>Secret</label>
+							<input type="checkbox" checked="checked" class="settings__secret" id='check6'>
+						</div>
+						<div class="settings__elem settings__immortal-wrapper">
+							<label class="settings__label" for='check7'>Immortal</label>
+							<input type="checkbox" checked="checked" class="settings__immortal" id='check7'>
+						</div>
+					</div>
+					<div class="settings__save">Установить</div>
+				</div>
+			</div> -->
+			<div class="input__items">
+				<div class="input__choise">
+					<div class="input__item weapon">
+						<img src="images/weapon1.png" alt="" class="weapon__img">
+						<p class="weapon__count">33.3 <i class="fa fa-money" aria-hidden="true"></i></p>
+						<p class="weapon__val">x3</p>
+						<div class="weapon__qual weapon__qual_b"></div>
+					</div>
+				</div>
+			</div>
+			<div class="input__enter">
+				<div class="input__show-put"></div>
+				<div class="input__valDeposit"><span class="input__valDeposit-span">0</span> <i class="fa fa-money" aria-hidden="true"></i></div>
+				<div class="input__btn">Продать<span class="input__colDeposit"></span></div>
+			</div>
+			<div class="input__close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		</div>
+	</div>
+</div>
+<div class="main__confirm-sale confirm-sale">
+	<div class="confirm-sale__inner">
+		<div class="confirm-sale__window">
+			<div class="confirm-sale__header">
+				<h3 class="confirm-sale__h3">Подтвердите продажу</h3>
+			</div>
+			<div class="confirm-sale__items"></div>
+			<div class="confirm-sale__btns">
+				<div class="confirm-sale__false">Изменить</div>
+				<div class="confirm-sale__val">0$</div>
+				<div class="confirm-sale__true">Подтвердить</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<div class="footer__created">
+		<p>Created by Barb0SSa</p>
+	</div>
+	<div class="footer__date">
+		2021
+	</div>
+	<div class="footer__social">
+		<div class="footer__vk">
+			<a href="https://vk.com/barb05sa"><i class="fa fa-vk" aria-hidden="true"></i>/barb05Sa</a>
+		</div>
+		<div class="footer__telegram">
+			<a href="https://t.me/Barb05Sa"><i class="fa fa-telegram" aria-hidden="true"></i>@Barb05Sa</a>
+		</div>
+	</div>
+</footer>
+
+
+<div class="sounds">
+	<audio class="sounds__deposit" src="sounds/deposit2.mp3"></audio>
+	<audio src="sounds/go-new-gambling.mp3" class="sounds__open"></audio>
+	<audio src="sounds/papich.mp3" class="sounds__papich sound"></audio>
+	<audio src="sounds/timer.mp3" class="sounds__timer"></audio>
+	<audio src="sounds/message.mp3" class="sounds__message"></audio>
+	<audio src="sounds/epic_drop2.mp3" class="sounds__epic-drop"></audio>
+</div>
+
+	<script src='script/functions.js'></script>
+	<script src="script/bd.js"></script>
+	<script src='script/bots.js'></script>
+	<script src='script/player.js'></script>
+	<script src='script/visual.js'></script>
+	<script src="script/game__roulette.js"></script>
+	<script src="script/roulette.js"></script>
+	<script src="script/cases.js"></script>
+	<script src='script/window.js'></script>
+
+</body>
+</html>
